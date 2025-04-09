@@ -1,0 +1,33 @@
+<div class="container">
+    <h2 class="text-center">All Flights</h2>
+    <table>
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>Flight Number</th>
+    <th>Airline</th>
+    <th>Source</th>
+    <th>Destination</th>
+    <th>Departure Time</th>
+    <th>Arrival Time</th>
+    <th>Fare</th>
+    <th>Total Seats</th>
+    <th>Available Seats</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let flight of flights">
+    <td>{{ flight.id }}</td>
+    <td>{{ flight.flightNumber }}</td>
+    <td>{{ flight.airline }}</td>
+    <td>{{ flight.source }}</td>
+    <td>{{ flight.destination }}</td>
+    <td>{{ flight.departureTime }}</td>
+    <td>{{ flight.arrivalTime }}</td>
+    <td>{{ flight.fare }}</td>
+    <td>{{ flight.totalSeats }}</td>
+    <td>{{ flight.availableSeats }}</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>

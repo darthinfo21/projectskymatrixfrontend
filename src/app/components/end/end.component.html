@@ -1,0 +1,36 @@
+<div class="a">
+<div class="body">
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1>Thank You!</h1>
+      <p>Thank you for booking with Sky Matrix Airlines!</p>
+    </div>
+ 
+    <!-- Thank You Message Section -->
+    <div class="thank-you-message">
+      <h2>Your Booking is Confirmed!</h2>
+      <p>We sincerely appreciate your trust in us for your travel needs. Our goal is to provide you with an exceptional travel experience, and we hope you enjoyed booking your flight with us.</p>
+      <p>Fly High Dream Big! Safe travels, and we look forward to welcoming you on board soon.</p>
+      <p>For any inquiries or support, please contact our customer service team. Thank you once again, and have a fantastic journey!</p>
+    </div>
+    <!-- jQuery for Animations -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".thank-you-message").hover(
+        function () {
+          $(this).css("box-shadow", "0 8px 16px rgba(0, 0, 0, 0.2)");
+        },
+        function () {
+          $(this).css("box-shadow", "0 4px 8px rgba(0, 0, 0, 0.2)");
+        }
+      );
+      $(".hero-section").hide().fadeIn(1000);
+      $(".thank-you-message").hide().slideDown(1000);
+    });
+  </script>
+  </div>
+
+  
+  </div>
+  

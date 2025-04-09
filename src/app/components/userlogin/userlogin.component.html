@@ -1,0 +1,58 @@
+<!-- <div class="form-wrapper">
+    <h2 style="text-align: center;">LOGIN</h2>
+    <form (ngSubmit)="onLogin()">
+    <div class="form-control">
+    <input type="text" [(ngModel)]="user.username" name="username" required>
+    <label>Username</label>
+    </div>
+    <div class="form-control">
+    <input type="password" [(ngModel)]="user.password" name="password" required>
+    <label>Password</label>
+    </div>
+    <button type="submit">Sign In</button>
+    <div class="form-help">
+    <div class="remember-me">
+    <input type="checkbox" id="remember-me">
+    <label for="remember-me">Remember me</label>
+    </div>
+    <a href="#">Need help?</a>
+    </div>
+    </form>
+    <p>New to Skymatrix? <a href="#" (click)="register()">Sign up now</a></p>
+    <div *ngIf="loginMessage">{{ loginMessage }}</div>
+    </div> -->
+    <div class="login-container">
+        <div class="login-card">
+        <button class="close-btn">×</button>
+        <h2>Welcome back</h2>
+        <p>Great to see you again!</p>
+         
+            <form (ngSubmit)="onLogin()">
+        <label for="username">Username</label>
+        <div class="input-container">
+        <input type="text" id="username" [(ngModel)]="user.username" name="username" placeholder="Enter your username" required />
+        </div>
+         
+              <label for="password">Password</label>
+        <div class="input-container">
+        <input type="password" id="password" [(ngModel)]="user.password" name="password" placeholder="Enter your password" required />
+        </div>
+         
+              <button type="submit" class="signin-btn">Sign In</button>
+        </form>
+         
+            <p class="signup-text">
+        
+              Don't have an account? <a href="#" (click)="register()">Sign up</a>
+        </p>
+         
+            <p class="or-text">Or continue with</p>
+         
+            <div class="social-login">
+        <button class="social-btn google-btn" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/c/c1/20170301123009%21Google_%22G%22_logo.svg/120px-Google_%22G%22_logo.svg.png" alt="google logo">&nbsp;Google</button>
+        <button class="social-btn twitter-btn"><img src="https://cdn.iconscout.com/icon/free/png-512/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-sign-logos-pack-icons-7651211.png?f=webp&w=512" alt="twitter logo">&nbsp;Twitter</button>
+        </div>
+        </div>
+        </div>
+        
+         

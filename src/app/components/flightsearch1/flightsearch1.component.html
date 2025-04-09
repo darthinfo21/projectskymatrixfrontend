@@ -1,0 +1,52 @@
+<div class="flight-search-container">
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <div class="suggestions-container">
+      <input
+        type="text"
+        placeholder="Source"
+        [(ngModel)]="source"
+        (input)="onSourceInputChange(source)"
+        (focus)="onSourceInputChange(source)"
+      />
+      <ul *ngIf="sourceSuggestions.length > 0" class="suggestions-dropdown">
+        <li *ngFor="let suggestion of sourceSuggestions" (click)="selectSourceSuggestion(suggestion)">
+          {{ suggestion }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="suggestions-container">
+      <input
+        type="text"
+        placeholder="Destination"
+        [(ngModel)]="destination"
+        (input)="onDestinationInputChange(destination)"
+        (focus)="onDestinationInputChange(destination)"
+      />
+      <ul *ngIf="destinationSuggestions.length > 0" class="suggestions-dropdown">
+        <li *ngFor="let suggestion of destinationSuggestions" (click)="selectDestinationSuggestion(suggestion)">
+          {{ suggestion }}
+        </li>
+      </ul>
+    </div>
+    <button (click)="searchFlights()">Search</button>
+  </div>
+
+  <!-- Flights Section -->
+  <div *ngIf="flights.length > 0" class="flights-container">
+    <h2>Available Flights</h2>
+    <div *ngFor="let flight of flights" class="flight-card">
+      <div class="flight-details">
+        <h3>{{ flight.source }} → {{ flight.destination }}</h3>
+        <p>{{ flight.airline }}</p>
+        <p>Departure: {{ flight.departureTime }}</p>
+      </div>
+      <div class="flight-price">
+        <p>${{ flight.fare }}</p>
+        <button (click)="Matrix(flight.id)">Book Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+

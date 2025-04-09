@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.booking-details-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.booking-details-container h2 {
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.booking-details-container p {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.booking-details-container p strong {
+  color: #000;
+}
+
+.booking-details-container h3 {
+  color: #007bff;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.proceed-button, .download-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.proceed-button:hover, .download-button:hover {
+  background-color: #0056b3;
+}
+
+.loading-message {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-top: 50px;
+}
+
+h2{
+  font-size: 50px;
+  text-transform: uppercase;
+}

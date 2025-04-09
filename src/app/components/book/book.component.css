@@ -1,0 +1,127 @@
+/* General Styles */
+
+
+/* Container Styles */
+.body {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.body:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Marquee Styles */
+marquee img {
+  width: 100%;
+  height: auto;
+}
+
+/* Form Content Styles */
+.content {
+  text-align: center;
+  padding: 20px;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.field h5 {
+  text-align: left;
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  transition: border-color 0.3s;
+}
+
+.field input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.field span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #cccccc;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #00408d;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .body {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .text {
+      font-size: 1.25rem;
+  }
+
+  .field input {
+      padding: 10px;
+  }
+
+  button {
+      padding: 12px;
+  }
+}
+
+/* Hover Effects */
+.field input:hover {
+  border-color: #007bff;
+}
+
+.field span:hover {
+  color: #007bff;
+}

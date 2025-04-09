@@ -1,0 +1,29 @@
+<div class="body">
+  <div class="content">
+  <div class="text">BOOKING</div>
+  <form (ngSubmit)="bookFlight()">
+  <div class="field">
+  <h5>User ID</h5>
+  <input type="text" [(ngModel)]="booking.userId" name="userId" readonly>
+  <span class="fa fa-user"></span>
+  </div>
+  <br>
+  <div class="field">
+  <h5>Flight ID</h5>
+  <input type="text" [(ngModel)]="booking.flightId" name="flightId" readonly>
+  <span class="fas fa-plane"></span>
+  </div>
+  <br>
+  <div class="field">
+  <h5>Number of Passengers</h5>
+  <input type="number" [(ngModel)]="booking.numberOfPassengers" name="numberOfPassengers" required>
+  <span class="fas fa-users"></span>
+  </div>
+  <br>
+  <button type="submit">Proceed</button>
+  </form>
+  <p>{{ bookingMessage }}</p>
+  </div>
+  </div>
+  
+   

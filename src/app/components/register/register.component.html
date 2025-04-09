@@ -1,0 +1,55 @@
+<div class="body">
+    <marquee behavior="scroll" direction="right">
+    <img src="https://media.tenor.com/QyiWOraeA9oAAAAj/avion-travel.gif" alt="Traveling airplane">
+    </marquee>
+    <div class="content">
+    <div class="text">Registration</div>
+    <form (ngSubmit)="register()" #registrationForm="ngForm">
+    <div class="field">
+    <label>Username</label>
+    <input type="text" [(ngModel)]="user.username" name="username" required>
+    <span class="fas fa-user"></span>
+    </div>
+    <br>
+    <div class="field">
+    <label>Password</label>
+    <input type="password" [(ngModel)]="user.password" name="password" required>
+    <span class="fas fa-lock"></span>
+    </div>
+    <br>
+    <div class="field" [ngClass]="{'has-error': email.invalid && (email.dirty || email.touched)}">
+    <label>Email</label>
+    <input type="email" [(ngModel)]="user.email" name="email" #email="ngModel" required email>
+    <span class="fas fa-envelope"></span>
+    <div *ngIf="email.invalid && (email.dirty || email.touched)">
+    <small *ngIf="email.errors?.['required']">Email is required.</small>
+    <small *ngIf="email.errors?.['email']">Invalid email address.</small>
+    </div>
+    </div>
+    <br>
+    <div class="field" [ngClass]="{'has-error': phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)}">
+    <label>Phone Number</label>
+    <input type="tel" [(ngModel)]="user.phoneNumber" name="phoneNumber" #phoneNumber="ngModel" required pattern="^[0-9]{10}$">
+    <span class="fas fa-phone"></span>
+    <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)">
+    <small *ngIf="phoneNumber.errors?.['required']">Phone number is required.</small>
+    <small *ngIf="phoneNumber.errors?.['pattern']">Invalid phone number. Must be 10 digits.</small>
+    </div>
+    </div>
+    <br>
+    <div class="field">
+    <label>Date of Birth</label>
+    <input [(ngModel)]="user.dateOfBirth" name="dateOfBirth" required>
+    <span class="fas fa-calendar"></span>
+    </div>
+    <br>
+    <div class="field">
+    <label>Wallet Balance</label>
+    <input type="number" [(ngModel)]="user.walletBalance" name="walletBalance" required>
+    <span class="fas fa-wallet"></span>
+    </div>
+    <button type="submit" [disabled]="registrationForm.invalid">Submit</button>
+    </form>
+    <p>{{ registrationMessage }}</p>
+    </div>
+    </div>

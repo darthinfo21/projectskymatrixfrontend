@@ -1,0 +1,99 @@
+body,html{
+  height: 100%;
+}
+/* Styles for Hero Section */
+.hero-section {
+  background-color: #0056d2; /* Blue background */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 100px 20px;
+
+}
+ 
+.hero-content h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+ 
+.hero-content p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+ .logo{
+  padding-right: 30px;
+ }
+nav {
+  background-color: #007bff; /* Match the blue color */
+  padding: 10px; /* Add some padding */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-between; /* Distribute space between elements */
+  align-items: center; /* Vertically align items */
+}
+ 
+nav h1 {
+  margin: 0; /* Remove default margin */
+  color: white; /* White text color */
+  font-size: 24px; /* Adjust font size as needed */
+}
+ 
+nav .buttons {
+  display: flex; /* Align buttons horizontally */
+  gap: 10px; /* Add space between buttons */
+}
+ 
+nav .buttons input[type="button"] {
+  background-color: #007bff; /* Same blue background */
+  color: white; /* White text */
+  border: none; /* Remove button border */
+  padding: 8px 16px; /* Add padding to buttons */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Indicate it's clickable */
+}
+ 
+nav .buttons input[type="button"]:hover {
+    background-color: #0069d9; /* Darker blue on hover */
+}
+header {
+  background-color: #007BFF;
+  width: 100%;
+
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: flex
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav ul {
+  padding-left: 50%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+header nav input {
+  color: #fff;
+  text-decoration: none;
+}
+main #hero {
+  background-color: #007BFF;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}

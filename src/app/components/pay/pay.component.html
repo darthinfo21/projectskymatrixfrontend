@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form (ngSubmit)="addToWallet()">
+        <div class="col-50">
+          <h3>Payment</h3>
+          <label>Accepted Cards</label>
+          <div class="icon-container">
+            <i class="fa fa-cc-visa" style="color:navy;"></i>
+            <i class="fa fa-cc-amex" style="color:blue;"></i>
+            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+            <i class="fa fa-cc-discover" style="color:orange;"></i>
+          </div>
+          <label for="price">Total</label>
+          <input type="text" id="price" name="price" [value]="walletBalance" readonly>
+          <label for="currency">Currency</label>
+          <select id="currency" name="currency">
+            <option value="USD">USD</option>
+          </select>
+          <hr>
+          <label for="method">Payment Method</label>
+          <select id="method" name="method">
+            <option value="phonepe">PayTm</option>
+            <option value="paytm">PhonePe</option>
+            <option value="gpay">GPay</option>
+            <option value="super.money">PayPal</option>
+          </select>
+          <hr>
+          <label for="intent">Intent</label>
+          <select id="intent" name="intent">
+            <option value="sale">Sale</option>
+          </select>
+          <hr>
+        </div>
+        <input type="submit"  (click)="addToWallet()" value="Add to Wallet" class="btn">
+      </form>
+      <p>{{ paymentMessage }}</p>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body, html {
+    height: 100%; /* Ensure body and html take up full viewport height */
+    margin: 0; /* Remove default body margins */
+    display: flex; /* Use flexbox for the entire page */
+    flex-direction: column; /* Stack elements vertically */
+  }
+   
+  .main-content {
+    flex: 1; /* Allow main content to expand and push the footer down */
+  }
+   
+  footer {
+    background-color: #f0f0f0; /* Example background color */
+    padding: 10px;
+    text-align: center; /* Center text */
+  }

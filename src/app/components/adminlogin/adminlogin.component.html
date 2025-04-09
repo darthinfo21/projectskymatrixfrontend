@@ -1,0 +1,26 @@
+<div class="login-container">
+  <div class="login-card">
+  <button class="close-btn">×</button>
+  <h2>Admin Login</h2>
+  <p>Great to see you again!</p>
+   
+      <form (ngSubmit)="onSubmit()">
+  <label for="username">Username</label>
+  <div class="input-container">
+  <input type="text" id="username" [(ngModel)]="loginData.username" name="username" placeholder="Enter your username" required />
+  </div>
+   
+        <label for="password">Password</label>
+  <div class="input-container">
+  <input type="password" id="password" [(ngModel)]="loginData.password" name="password" placeholder="Enter your password" required />
+  </div>
+   
+        <button type="submit" class="signin-btn">Login</button>
+  </form>
+   
+      <div *ngIf="successMessage" class="alert alert-success mt-3">{{ successMessage }}</div>
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3">{{ errorMessage }}</div>
+  </div>
+  </div>
+  
+   

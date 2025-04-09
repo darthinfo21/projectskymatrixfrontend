@@ -1,0 +1,88 @@
+<!-- <div *ngFor="let bookingDetails of bookings" class="booking-details-container">
+    <h2>Booking Confirmation</h2>
+    <p><strong>Username:</strong> {{ bookingDetails.user.username }}</p>
+    <p><strong>Number of Passengers:</strong> {{ bookingDetails.booking.numberOfPassengers }}</p>
+    <p><strong>Wallet Balance:</strong> {{ bookingDetails.user.walletBalance | currency }}</p>
+    <h3>Flight Details</h3>
+    <p><strong>Flight Number:</strong> {{ bookingDetails.flight.flightNumber }}</p>
+    <p><strong>Airline:</strong> {{ bookingDetails.flight.airline }}</p>
+    <p><strong>Source:</strong> {{ bookingDetails.flight.source }}</p>
+    <p><strong>Destination:</strong> {{ bookingDetails.flight.destination }}</p>
+    <p><strong>Departure Time:</strong> {{ bookingDetails.flight.departureTime | date: 'short' }}</p>
+    <p><strong>Arrival Time:</strong> {{ bookingDetails.flight.arrivalTime | date: 'short' }}</p>
+    <p><strong>Fare:</strong> {{ bookingDetails.flight.fare | currency }}</p>
+    <h3>Selected Seats</h3>
+    <p><strong>Seats:</strong> {{ selectedSeats[bookingDetails.booking.id]?.join(', ') }}</p>
+    <button type="submit" class="proceed-button">Proceed</button>
+  </div> -->
+<!-- 
+  -->
+  <!-- <div class="container">
+    <div *ngFor="let bookingDetails of bookings" class="card mb-4">
+        <div class="card-header">
+            <h2 class="h5">Order Details</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>Username:</strong> {{ bookingDetails.user.username }}</p>
+            <p><strong>Number of Passengers:</strong> {{ bookingDetails.booking.numberOfPassengers }}</p>
+            <p><strong>Wallet Balance:</strong> {{ bookingDetails.user.walletBalance | currency }}</p>
+            <h3 class="h6 flight-details-heading">Flight Details</h3>
+            <p><strong>Flight Number:</strong> {{ bookingDetails.flight.flightNumber }}</p>
+            <p><strong>Airline:</strong> {{ bookingDetails.flight.airline }}</p>
+            <p><strong>Source:</strong> {{ bookingDetails.flight.source }}</p>
+            <p><strong>Destination:</strong> {{ bookingDetails.flight.destination }}</p>
+            <p><strong>Departure Time:</strong> {{ bookingDetails.flight.departureTime | date: 'short' }}</p>
+            <p><strong>Arrival Time:</strong> {{ bookingDetails.flight.arrivalTime | date: 'short' }}</p>
+            <p><strong>Fare:</strong> {{ bookingDetails.flight.fare | currency }}</p>
+           
+            <button type="button" (click)="confirmCancel(bookingDetails.booking.id)" class="btn btn-danger">Cancel Booking</button>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="container">
+  <div *ngFor="let bookingDetails of bookings" class="card mb-4">
+      <div class="card-header">
+          <h2 class="h5">Order Details</h2>
+      </div>
+      <h3 class="user-details-heading">👤 User Details :</h3>
+      <div class="card-body">
+          <div class="user-info">
+              <p><strong>Username:</strong> {{ bookingDetails.user.username }}</p>
+              <p><strong>Number of Passengers:</strong> {{ bookingDetails.booking.numberOfPassengers }}</p>
+              <p><strong>Wallet Balance:</strong> {{ bookingDetails.user.walletBalance | currency }}</p>
+          </div>
+          <br>
+          <h3 class="flight-details-heading">✈️ Flight Details :</h3>
+          <div class="flight-info">
+              <p><strong>Flight Number:</strong> {{ bookingDetails.flight.flightNumber }}</p>
+              <p><strong>Airline:</strong> {{ bookingDetails.flight.airline }}</p>
+              <p><strong>Source:</strong> {{ bookingDetails.flight.source }}</p>
+              <p><strong>Destination:</strong> {{ bookingDetails.flight.destination }}</p>
+              <p><strong>Departure Time:</strong> {{ bookingDetails.flight.departureTime | date: 'short' }}</p>
+              <p><strong>Arrival Time:</strong> {{ bookingDetails.flight.arrivalTime | date: 'short' }}</p>
+              <p><strong>Fare:</strong> {{ bookingDetails.flight.fare | currency }}</p>
+          </div>
+          <button type="button" (click)="confirmCancel(bookingDetails.booking.id)" class="btn btn-danger">Cancel Booking</button>
+      </div>
+  </div>
+</div>
+
+<!-- jQuery for Animations -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function () {
+      $(".card").hide().fadeIn(1000);
+
+      $(".card").hover(
+          function () {
+              $(this).css("box-shadow", "0 8px 16px rgba(0, 0, 0, 0.2)").css("transform", "translateY(-10px)");
+          },
+          function () {
+              $(this).css("box-shadow", "0 4px 8px rgba(0, 0, 0, 0.2)").css("transform", "translateY(0)");
+          }
+      );
+  });
+</script>
+

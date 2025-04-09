@@ -17,7 +17,7 @@ describe('AppComponent', () => {
   it(`should have the 'skymatrix' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('skymatrix');
+    expect(app['title']).toEqual('skymatrix');
   });
 
   it('should render title', () => {

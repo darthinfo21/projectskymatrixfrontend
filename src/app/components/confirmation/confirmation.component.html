@@ -1,0 +1,45 @@
+<!-- 
+Booking Confirmation Container -->
+<!-- <div *ngIf="bookingDetails" class="booking-details-container">
+  <h2>Booking Confirmation</h2>
+  <p><strong>Username:</strong> {{ bookingDetails.user.username }}</p>
+  <p><strong>Number of Passengers:</strong> {{ bookingDetails.booking.numberOfPassengers }}</p>
+  <p><strong>Wallet Balance:</strong> {{ bookingDetails.user.walletBalance | currency }}</p>
+  <h3>Flight Details</h3>
+  <p><strong>Flight Number:</strong> {{ bookingDetails.flight.flightNumber }}</p>
+  <p><strong>Airline:</strong> {{ bookingDetails.flight.airline }}</p>
+  <p><strong>Source:</strong> {{ bookingDetails.flight.source }}</p>
+  <p><strong>Destination:</strong> {{ bookingDetails.flight.destination }}</p>
+  <p><strong>Departure Time:</strong> {{ bookingDetails.flight.departureTime | date: 'short' }}</p>
+  <p><strong>Arrival Time:</strong> {{ bookingDetails.flight.arrivalTime | date: 'short' }}</p>
+  <p><strong>Fare:</strong> {{ bookingDetails.flight.fare | currency }}</p>
+  <button type="submit" class="proceed-button">Proceed</button>
+</div>
+<div *ngIf="!bookingDetails" class="loading-message">
+  <p>Loading booking details...</p>
+</div> --> 
+<!-- confirmation.component.html -->
+<div *ngIf="bookingDetails" class="booking-details-container">
+  <h2>Booking Confirmation</h2>
+  <h3>User Details</h3>
+  <p><strong>Username:</strong> {{ bookingDetails.user.username }}</p>
+  <p><strong>Number of Passengers:</strong> {{ bookingDetails.booking.numberOfPassengers }}</p>
+  <p><strong>Wallet Balance:</strong> {{ bookingDetails.user.walletBalance | currency }}</p>
+  <h3>Flight Details</h3>
+  <p><strong>Flight Number:</strong> {{ bookingDetails.flight.flightNumber }}</p>
+  <p><strong>Airline:</strong> {{ bookingDetails.flight.airline }}</p>
+  <p><strong>Source:</strong> {{ bookingDetails.flight.source }}</p>
+  <p><strong>Destination:</strong> {{ bookingDetails.flight.destination }}</p>
+  <p><strong>Departure Time:</strong> {{ bookingDetails.flight.departureTime | date: 'short' }}</p>
+  <p><strong>Arrival Time:</strong> {{ bookingDetails.flight.arrivalTime | date: 'short' }}</p>
+  <p><strong>Fare:</strong> {{ bookingDetails.flight.fare | currency }}</p>
+  <h3>Selected Seats</h3>
+  <p><strong>Seats:</strong> {{ selectedSeats.join(', ') }}</p>
+  <button type="submit" class="proceed-button" (click)="end()">Proceed</button>
+  &nbsp;&nbsp;
+  <button type="button" (click)="downloadPDF()" class="download-button">Download Ticket</button>
+
+</div>
+<div *ngIf="!bookingDetails" class="loading-message">
+  <p>Loading booking details...</p>
+</div>

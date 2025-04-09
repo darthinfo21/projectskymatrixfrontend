@@ -1,0 +1,15 @@
+<!-- Delete Flight Container -->
+<div class="delete-flight-container">
+  <div class="delete-flight-header">Delete Flight</div>
+  <form>
+    <div class="form-group">
+      <label for="flight-id">Flight Name/ID</label>
+      <input type="text" id="flight-id" name="flightId" [(ngModel)]="flightId" placeholder="Enter flight name or ID" required>
+    </div>
+    <button type="button" class="delete-button" (click)="deleteFlight()">Delete Flight</button>
+    <br>
+    &nbsp;
+    <button type="button" class="delete-button" (click)="home()">Log Out</button>
+  </form>
+  <div *ngIf="deleteMessage" class="delete-message">{{ deleteMessage }}</div>
+</div>

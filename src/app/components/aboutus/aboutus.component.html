@@ -1,0 +1,78 @@
+
+<div class="body">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>About SkyMatrix Airlines</h1>
+    <p>
+      SkyMatrix Airlines is committed to connecting the world through exceptional air travel experiences.
+      With innovation and customer satisfaction at our core, we aim to make every journey unforgettable.
+    </p>
+  </div>
+ 
+  <!-- Mission Section -->
+  <div>
+    <h2 class="section-title">Our Mission</h2>
+    <p style="text-align: center; max-width: 800px; margin: auto; padding: 0 20px;">
+      At SkyMatrix Airlines, our mission is to redefine air travel by delivering world-class services
+      that exceed customer expectations. We are dedicated to providing safe, comfortable, and affordable journeys
+      that connect people, cultures, and destinations worldwide. By focusing on exceptional customer service and
+      eco-friendly practices, we aim to make air travel accessible and sustainable for future generations.
+    </p>
+  </div>
+ 
+  <!-- Core Values Section -->
+  <div class="core-values">
+    <div>
+      <h4>Safety</h4>
+      <p>Your safety is our top priority, and we adhere to the highest standards of aviation security.</p>
+    </div>
+    <div>
+      <h4>Customer Focus</h4>
+      <p>We listen to our customers and strive to provide exceptional experiences every time.</p>
+    </div>
+    <div>
+      <h4>Innovation</h4>
+      <p>We embrace technology and innovation to enhance efficiency and customer satisfaction.</p>
+    </div>
+  </div>
+ 
+  <!-- Meet the Team Section -->
+  <div>
+    <h2 class="section-title">Meet the Team</h2>
+    <div class="team-section">
+      <div class="team-card">
+        
+        <h4>Nithin</h4>
+        <p>CEO</p>
+      </div>
+      <div class="team-card">
+        
+        <h4>Shiva</h4>
+        <p>COO</p>
+      </div>
+      <div class="team-card">
+        
+        <h4>Harsha Deep</h4>
+        <p>CTO</p>
+      </div>
+      <div class="team-card">
+        <h4>Siddharth</h4>
+        <p>CTO</p>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- jQuery for Animations -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(window).on("scroll", function () {
+        $(".team-card").each(function () {
+          if ($(this).offset().top <= $(window).scrollTop() + $(window).height() - 100) {
+            $(this).css({ opacity: 1, transform: "translateY(0)" });
+          }
+        });
+      });
+    });
+  </script>
+</div>
